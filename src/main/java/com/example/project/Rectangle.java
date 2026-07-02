@@ -1,15 +1,23 @@
 package com.example.project;
 
+// Se agreran los atributos privados
 public class Rectangle implements Shape {
-    // TODO: add fields as needed
+    private double width;
+    private double height;
 
+    // Constructor
     public Rectangle(double width, double height) {
-        // TODO: store parameter(s)
+        this.width = width;
+        this.height = height;
+
     }
 
+    // Método sobreescrito con override
     @Override
     public double getArea() {
-        // TODO: compute and return area
-        return 0;
+        if (width <= 0 || height <= 0) {
+            return 0;
+        }
+        return width * height;
     }
 }

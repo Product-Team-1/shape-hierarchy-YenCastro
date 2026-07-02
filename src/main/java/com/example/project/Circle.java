@@ -1,15 +1,19 @@
 package com.example.project;
 
 public class Circle implements Shape {
-    // TODO: add fields as needed
+    private double radius;
 
+    // Constructor
     public Circle(double radius) {
-        // TODO: store parameter(s)
+        this.radius = radius;
     }
 
+    // Método sobreescrito con override
     @Override
     public double getArea() {
-        // TODO: compute and return area
-        return 0;
+        if(radius <= 0){
+            return 0;
+        }
+        return Math.PI * radius * radius;
     }
 }
